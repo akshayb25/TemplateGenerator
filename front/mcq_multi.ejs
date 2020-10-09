@@ -1,0 +1,48 @@
+<div add-custom-template="" template-url="templates/multiple-choice-template.html" page-no="1" settings-path="templates/mcq-settings-panel.html" class="customClass authoring-div" data-type="multiple-choice">
+    <div class="canvas-wrap multiple-choice multipleChoiceParent inlineImage multiple-select-mcq" mcq-template="" data-edit-mcq-template="" data-maxtries="3">
+       <form id="template-editor" class="outline" action="/">
+          <div class="header-text">
+             <div class="template-header template-heading-color saveClick" data-editcontent=""><%= uiid2.header %></div>
+          </div>
+          <div class="instruction-text">
+             <div class="template-instruction" data-editcontent=""><%= uiid2.introduction %></div>
+          </div>
+          <div class="mcq-body">
+             <div class="template-clear-div">
+                <div class="template-width-7 option-feedback-container no-media-width">
+                   <div class="question-text">
+                      <div class="template-paragraph" data-editcontent=""><%= uiid2.instruction %></div>
+                   </div>
+                   <div class="option-feedback-container mcq-feedbacks">
+                      <div data-editcontent="" class="question-select-wrap multiple-questions" id="target">
+                        <% uiid2.listData[0].mcssData.choiceList.forEach(function(choice) { %>
+                         <div class="form-row default" id="mcqfocus">
+                            <span ng-show="!fieldData.listData[0].mcssData.isSingleSelect &#38;&#38; fieldData.settings.individualshowmecheckbox" class="icon-preview mcq-individual-show nghidedata"></span>                <!-- ngIf: fieldData.listData[0].mcssData.isSingleSelect -->                <!-- ngIf: !fieldData.listData[0].mcssData.isSingleSelect --><input type="checkbox" name="social" class="icheckbox icheck" id="option-ui-id-210" iscorrect="true"><!-- end ngIf: !fieldData.listData[0].mcssData.isSingleSelect -->                
+                            <label class="mcq-options" for="option-ui-id-210">
+                               <div class="template-control option-content"><%= choice.choice.choiceText %></div>
+                            </label>
+                            <div class="individual-feedback">
+                               <span class="correct-tick icon-Right"></span>                  
+                               <div class="template-control individual-feedback-text template-instruction option-content">This is correct</div>
+                            </div>
+                         </div>
+                         <% }); %>
+                        </div>
+                      <!-- single-select-wrap -->                  
+                   </div>
+                </div>
+                <!-- ngIf: fieldData.listData[0].mcssData.mediaVisible --><!-- template-highlight-wrap -->    
+             </div>
+             <!-- .clearfix -->    
+             <div class="btns">
+                <div title="Submit" class="btn sub mcq-submit submit-btn" data-localize="submit" data-no-of-attempts="3">Submit</div>
+                <div title="Reset Answer" class="btn mcq-reset reset reset-btn" data-localize="reset_me">Reset</div>
+                <div title="Show Answer" class="btn mcq-show-me showme-btn" ng-show="fieldData.settings.showmecheckbox" data-localize="show_me">Show Me</div>
+                <div title="Try Again" class="btn mcq-try-again tryagn-btn disabled nghidedata" ng-show="fieldData.settings.allowRestart" data-localize="try_again">Try Again</div>
+             </div>
+             <!-- btns -->  
+          </div>
+          <!-- template-body -->
+       </form>
+    </div>
+ </div>

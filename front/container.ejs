@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ibooks="http://apple.com/ibooks/html-extensions" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en-US" lang="en-US">
+   <head>
+      <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+      <link href="css/vendor/video-js.css" rel="stylesheet" />
+      <link href="css/vendor/icheck.css" rel="stylesheet" />
+      <link rel="stylesheet" href="css/vendor/easydropdown.css">
+      <link href="css/vendor/colorbox.css" rel="stylesheet" />
+      <link href="css/vendor/lightgallery.css" rel="stylesheet" />
+      <link href="css/vendor/jquery.bxslider.css" rel="stylesheet" />
+      <link href="css/vendor/modal.css" rel="stylesheet" />
+      <link href="css/style.css" rel="stylesheet" />
+      <link href="css/authoring/multiple-choice-template.css" rel="stylesheet" />
+      <link href="css/authoring/common.css" rel="stylesheet" />
+      <link href="css/authoring/kitaboo.css" rel="stylesheet" />
+      <link href="css/authoring/slideshow.css" rel="stylesheet" />
+      <link href="css/authoring/fib.css" rel="stylesheet" />
+      <link href="css/authoring/asidebar.css" rel="stylesheet" />
+      <link href="css/authoring/layout.css" rel="stylesheet" />
+      <link href="css/authoring/html-interactive.css" rel="stylesheet" />
+      <link rel="stylesheet" type="text/css" href="js/mathquill/mathquill.css"/>
+      <link type="text/css" rel="stylesheet" href="css/templates/match-the-pairs-template.css" class="custom-style">
+      <link type="text/css" rel="stylesheet" href="js/jquery.mCustomScrollbar.css" class="custom-style">
+      <link type="text/css" rel="stylesheet" href="css/templates/sorting-template.css" class="custom-style">
+      <link type="text/css" rel="stylesheet" href="css/templates/image-labelling-template.css" class="custom-style">
+      <style class="kitaboo-authoring-last-style">    body {background-color: #fff  !important;        font-size: 1em;    }    </style>
+      <script src="js/jquery-1.9.1.js"></script>    <script src="js/icheck.min.js"></script>    <script src="js/jquery.bxslider.min.js"></script>    <script src="js/lightgallery-all.js"></script>    <script src="js/colorbox-min.js"></script>    <script src="js/easydropdown.min.js"></script>    <script src="js/player-container.js"></script>    <script src="js/video.js"></script>    <script src="js/audio.min.js"></script>    <script src="js/bootstrap.min.js"></script>    <script type="text/javascript" src="js/mathquill/mathquill.js"></script>    <script type="text/javascript" src="js/modernizr.js"></script>    <script type="text/javascript" src="js/jquery_localize.js"></script>    <script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>    <script>        $(document).ready(function(){        var opts = { language: "en",pathPrefix:"localization/"};            $("[data-localize]").localize("player", opts);        });    </script>    <script type="text/javascript" src="js/jquery-ui.min.js" class="custom-script"></script><script type="text/javascript" src="js/jquery-ui-1.10.3.min.js" class="custom-script"></script><script type="text/javascript" src="js/jquery.ui.touch-punch.js" class="custom-script"></script><script type="text/javascript" src="js/templates/match-the-pairs-preview1.js" class="custom-script"></script><script type="text/javascript" src="js/templates/match-pair-line-preview1.js" class="custom-script"></script><script type="text/javascript" src="js/jquery.mCustomScrollbar.js" class="custom-script"></script><script type="text/javascript" src="js/templates/sorting-preview1.js" class="custom-script"></script><script type="text/javascript" src="js/templates/image-labelling-preview1.js" class="custom-script"></script><!-- <script class="kitaboo-authoring-last-script">    window.MathJax = {        MathML: {            extensions: ["mml3.js", "content-mathml.js"]        }    };    </script>    <script type="text/x-mathjax-config">        MathJax.Hub.Config({ menuSettings: { context: "Browser", showMathMenu:false }, messageStyle: 'none', SVG: { linebreaks: { automatic: true } }, TeX: { Macros: { goodbreak: '\\mmlToken{mo}[linebreak="goodbreak"]{}', badbreak: ['\\mmlToken{mo}[linebreak="nobreak"]{#1}',1], nobreak: ['\\mmlToken{mo}[linebreak="nobreak"]{#1}',1], invisibletimes: ['\\mmlToken{mo}{\u2062}'] } } });    </script>    <script type="text/javascript" async="true" src="js/MathJax.js?config=MML_HTMLorMML-full"></script> -->    <script>    var editor;    </script>
+   </head>
+   <body class='white_center_bg_main'>
+      
+      addTemplateHere
+      
+      <div class="modal fade modal-drag modal-answer" id="image-valid1" tabindex="-1" role="dialog" aria-labelledby="wolly-mammoth-modal" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-body" style="padding: 12px 25px 15px 25px;">
+                  <div class="label-holder">
+                     <div class="body-text" id="modalMassage"></div>
+                  </div>
+               </div>
+               <div class="modal-footer">                <button type="button" data-dismiss="modal" class="btn btn-primary">OK</button>            </div>
+            </div>
+         </div>
+      </div>
+      <div class="modal fade modal-drag attempts-alert" id="attempts-alert" tabindex="-1" role="dialog" aria-hidden="true" style="z-index:1050;">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-body">
+                  <p class="attempts-message"></p>
+                  <button class="attempts-close" data-dismiss="modal"><i class="icon-">:</i></button>		
+               </div>
+            </div>
+            <!-- modal-content -->  
+         </div>
+         <!-- modal-dialog -->
+      </div>
+      <div class="modal fade modal-drag external-html-template" id="external-html-template" tabindex="-1" role="dialog" aria-hidden="true" style="z-index:1050;">
+         <div class="modal-dialog default-modal-dim">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <div class="vertically-align">
+                     <div class="icon-Close" data-dismiss="modal"></div>
+                     <div class="icon-Expand"></div>
+                  </div>
+               </div>
+               <div class="modal-body">
+                  <iframe src="" style="width:100%;height:100%;"></iframe>          
+                  <div id="html-loader" style="display: block;">            <img src="images/ajax-loader.gif">          </div>
+               </div>
+            </div>
+            <!-- modal-content -->  
+         </div>
+         <!-- modal-dialog -->
+      </div>
+   </body>
+</html>
